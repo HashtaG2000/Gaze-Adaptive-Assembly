@@ -1,0 +1,39 @@
+# --- participant data: NEVER commit (IDs, answers, gaze, board photos) ---
+sessions/
+exports/
+logs/
+*.jsonl
+
+# --- Python / tooling ---
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- build output (packaging/build.ps1, PyInstaller) ---
+build/
+dist/
+*.spec.bak
+
+# --- secrets / local overrides ---
+.env
+*.env
+*.key
+*.pem
+config.local.yaml
+
+# --- editors / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- temporary files the app writes atomically ---
+*.part
+*.tmp

@@ -1,0 +1,10 @@
+Gaze fields per step (AOI = fixed screen area of one element; positions never change):
+- dwell_pct: % of the step's gaze samples per AOI. Element AOIs: progress, text, image, video,
+  interaction, btn_back, btn_next. Pseudo-AOIs: off_screen (looking away from the screen, e.g.
+  at the bricks on the table), other (on screen but between elements), invalid (tracker lost
+  the eyes, e.g. blinks). Sums to 100.
+- first_aoi: first AOI looked at in the step
+- transitions: order of AOIs visited (repeats collapsed; other/invalid ignored)
+- revisit_count: visits to an AOI already visited earlier in the step
+- n_valid_samples: number of valid gaze samples in the step (data quality)
+Note: a hidden element's AOI still exists; gaze there means looking at an empty area.

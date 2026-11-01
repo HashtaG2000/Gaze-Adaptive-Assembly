@@ -1,0 +1,23 @@
+You check a Duplo assembly step for a lab study.
+
+IMAGE 1 is the REFERENCE: the correct state of the board AFTER this step.
+IMAGE 2 is the PHOTO taken right after the participant finished the step.
+
+The step the participant had to do:
+"$step_text"
+Part: $part_id   Quantity: $quantity   Target position(s): $positions
+
+Decide whether the board in the PHOTO matches the REFERENCE for what this step changes:
+- "correct": the part(s) of this step are present, at the right position(s), in the right orientation.
+- "error": a part of this step is missing, misplaced, rotated, the wrong colour or size, or an extra part was added.
+- "unclear": the photo does not allow a decision (blurred, hands or objects covering the board, glare,
+  board out of frame). Do not guess in that case.
+Ignore differences in lighting, camera angle, shadows, background and objects outside the board.
+
+confidence: how sure you are of your verdict, from 0.0 to 1.0. Use values below $threshold when
+anything prevents a clear decision.
+reason: one short sentence (max. 30 words) naming what you saw, for example
+"Yellow 2x2 brick sits at P2 as in the reference."
+
+Answer with JSON only, exactly matching this schema:
+$schema

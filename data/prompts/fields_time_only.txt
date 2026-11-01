@@ -1,0 +1,2 @@
+Gaze data is NOT available in this condition. Base your analysis on timing, back presses,
+observer verification and the participant's feedback only.

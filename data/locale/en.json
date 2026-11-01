@@ -1,0 +1,520 @@
+{
+  "app": {
+    "participant_window": "Assembly Instructions",
+    "researcher_window": "Workspace"
+  },
+  "intake": {
+    "title": "Assembly Study Intake",
+    "subtitle": "Please provide your background info before calibration.",
+    "section_details": "YOUR DETAILS",
+    "section_item": "WHAT WOULD YOU LIKE TO BUILD?",
+    "id_label": "Participant ID",
+    "id_hint": "{length} characters: capital letters A–Z and digits 0–9",
+    "id_chip": "ID: {id}",
+    "item_steps": "{n} steps",
+    "optional": "(optional)",
+    "choose": "Please choose …",
+    "proceed_calibration": "Proceed to calibration",
+    "proceed_start": "Start",
+    "err_id_format": "The participant ID must be exactly {length} characters (A–Z, 0–9).",
+    "err_id_exists": "This participant ID already exists. Please check it with the experimenter.",
+    "err_missing": "Please complete: {fields}",
+    "err_no_sets": "No instructions found. Please contact the experimenter.",
+    "err_start": "Cannot start: {error}",
+    "number_hint": "Type a number ({min}–{max})"
+  },
+  "calibration": {
+    "title": "Eye-tracker check",
+    "point": "Point {i} of {n}",
+    "instruction": "Focus steadily on the collapsing ring without moving your head.",
+    "get_ready": "Get ready – look at the ring as soon as it appears.",
+    "result_pass": "Mean error {err}° (limit {limit}°) – check passed",
+    "result_fail": "Mean error {err}° (limit {limit}°) – check not passed",
+    "result_no_data": "Not enough gaze data was received",
+    "wait": "Please wait for the experimenter."
+  },
+  "player": {
+    "step_of": "Step {n} of {total}",
+    "streak": "Streak: {n}",
+    "repetition": "Repetition {n}",
+    "trial": "Trial run",
+    "level": {
+      "0": "Level 0: Base",
+      "1": "Level 1: Compact",
+      "2": "Level 2: Pro"
+    },
+    "guide": "Guide",
+    "press_prefix": "Press",
+    "press_suffix": "or tap the buzzer",
+    "key_names": {
+      "Space": "SPACEBAR",
+      "Return": "ENTER",
+      "Enter": "ENTER"
+    },
+    "next": "Next step",
+    "finish": "Finish",
+    "back": "Back",
+    "image_missing": "Image missing:\n{name}",
+    "video_missing": "Video missing:\n{name}",
+    "video_label": "LOOPING ACTION VIDEO",
+    "hidden": {
+      "text": "Text removed per participant request",
+      "image": "Images removed per participant request",
+      "video": "Video removed per participant request"
+    },
+    "roles": {
+      "part": "COMPONENT",
+      "position": "POSITION",
+      "method": "METHOD"
+    },
+    "points": "{n} pts",
+    "cheer": "{n} in a row - great work!"
+  },
+  "saved": {
+    "title": "Repetition {n} completed!",
+    "title_trial": "Trial run completed!",
+    "text": "All {steps} steps saved successfully.",
+    "text_time": "All {steps} steps saved successfully (completion time: {time} s).",
+    "review": "Let's review your experience with this layout.",
+    "continue": "Continue to feedback",
+    "badge_best": "New personal best!",
+    "badge_correct": "{n} steps verified correct",
+    "badge_points": "+{n} points"
+  },
+  "assess": {
+    "part1_title": "Layout assessment (part 1 of 2)",
+    "part1_subtitle": "Rate your experience and tell us if you want a more compact view.",
+    "q_difficulty": "1. How difficult was this layout?",
+    "difficulty": {
+      "easy": "Easy",
+      "medium": "Medium",
+      "hard": "Hard"
+    },
+    "q_compact": "2. Would you like a compacted version of this layout?",
+    "compact": {
+      "compress": "Yes (combine steps)",
+      "keep": "No (keep separate steps)",
+      "detail": "More detailed (split steps again)"
+    },
+    "compact_max": "The steps are already combined as much as possible.",
+    "next_part": "Next: additional changes",
+    "part2_title": "Layout customization (part 2 of 2)",
+    "part2_subtitle": "Select any elements you wish to remove from the display.",
+    "q_changes": "What additional changes do you need?",
+    "remove": {
+      "video": {
+        "label": "Remove videos",
+        "hint": "Keep static images only"
+      },
+      "text": {
+        "label": "Remove text",
+        "hint": "Visual media only"
+      },
+      "image": {
+        "label": "Remove images",
+        "hint": "Keep video and text only"
+      },
+      "gamification": {
+        "label": "Remove gamification",
+        "hint": "Hide the guide, streak and level badges"
+      }
+    },
+    "show": {
+      "video": {
+        "label": "Show videos again",
+        "hint": "Bring the looping videos back"
+      },
+      "text": {
+        "label": "Show text again",
+        "hint": "Bring the instruction text back"
+      },
+      "image": {
+        "label": "Show images again",
+        "hint": "Bring the images back"
+      },
+      "gamification": {
+        "label": "Show gamification again",
+        "hint": "Bring back the guide, streak and level badges"
+      }
+    },
+    "none": {
+      "label": "None of the above",
+      "hint": "Retain all elements"
+    },
+    "last_visible": "At least one of text, images or videos must stay visible.",
+    "submit": "Submit preferences & process"
+  },
+  "analysing": {
+    "title": "Processing your preferences",
+    "text_gaze": "One moment please … your answers, your working pace and the eye-tracking data are being evaluated.",
+    "text_time_only": "One moment please … your answers and your working pace are being evaluated.",
+    "generating_title": "Preparing your new layout",
+    "generating_text": "One moment please …",
+    "failed_title": "The new layout could not be created",
+    "failed_text": "We continue with your current layout."
+  },
+  "trial_intro": {
+    "title": "Your new layout",
+    "subtitle": "Based on your answers and your working pace",
+    "changes_title": "HOW THE INSTRUCTIONS CHANGE",
+    "note": "The next run is a trial run – it does not count as a repetition. Afterwards you decide whether to keep the new layout.",
+    "start": "Start trial run",
+    "keep_current": "Keep my current layout",
+    "level_up": "Level up: {level} unlocked"
+  },
+  "changes": {
+    "merge_up": {
+      "1": "Picking up and placing a brick are combined into one step where you are confident.",
+      "2": "Identical bricks in a row are combined into one step (e.g. “Take 2 …”) with fewer pictures."
+    },
+    "merge_down": {
+      "1": "Identical bricks are shown one by one again.",
+      "0": "Picking up and placing are shown as separate steps again."
+    },
+    "texts": "The instruction texts are rewritten for you.",
+    "hide": {
+      "text": "The instruction text will be hidden.",
+      "image": "The images will be hidden.",
+      "video": "The videos will be hidden.",
+      "gamification": "The guide, streak and level badges will be hidden."
+    },
+    "show": {
+      "text": "The instruction text will be shown again.",
+      "image": "The images will be shown again.",
+      "video": "The videos will be shown again.",
+      "gamification": "The guide, streak and level badges will be shown again."
+    }
+  },
+  "feedback": {
+    "title": "Trial run feedback",
+    "subtitle": "Trial run with the new layout completed",
+    "question": "Did the new layout work well for you?",
+    "text": "Would you like to keep working with it or go back to the previous version?",
+    "keep": "Keep new layout",
+    "revert": "Back to previous version",
+    "stars": "{score} / 5"
+  },
+  "survey": {
+    "page": "Page {page} of {pages}",
+    "next": "Next",
+    "back": "Back",
+    "submit": "Submit"
+  },
+  "complete": {
+    "title": "Session complete!",
+    "text": "Thank you for taking part. All your answers have been saved. Please let the experimenter know that you are done."
+  },
+  "llm_default": {
+    "compress": "Your instructions get shorter: steps you know well are combined.",
+    "detail": "Your instructions get more detailed: steps are shown one by one again.",
+    "keep": "The steps stay the same. The display is adjusted as you asked."
+  },
+  "mock_llm": {
+    "compress": "Sure – let's make your instructions shorter. Steps you handled confidently are combined.",
+    "detail": "Sure – let's make your instructions more detailed. The actions are shown one by one again.",
+    "keep": "The steps stay the same. The display is adjusted the way you asked."
+  },
+  "cockpit": {
+    "title": "Workspace",
+    "subtitle": "Gaze-adaptive assembly study · live control, recordings, enrichments and analysis",
+    "preflight": "PRE-FLIGHT SETUP",
+    "condition": "Condition",
+    "gaze_source": "Gaze source",
+    "llm_client": "LLM client",
+    "gamification_start": "Gamification on at start (guide, streak, level)",
+    "calibration_start": "Run the eye-tracker check before the first repetition",
+    "telemetry": "HARDWARE TELEMETRY",
+    "tracker_connected": "TRACKER CONNECTED",
+    "samples_arriving": "SAMPLES ARRIVING",
+    "sample_rate": "SAMPLE RATE",
+    "yes": "Yes",
+    "no": "No",
+    "start_session": "Start session",
+    "end_session": "End session",
+    "drift_check": "Drift check",
+    "author": "Author",
+    "sessions": "Sessions",
+    "export": "Export package",
+    "back_to_live": "Back to live",
+    "overlay": "AOIs + gaze on participant screen (testing)",
+    "no_session": "No session yet. Choose the settings above and press Start session.",
+    "waiting_intake": "Waiting for the participant intake (condition {condition}) …",
+    "archived_banner": "ARCHIVED SESSION {id} – read only",
+    "tracker_rate": "Tracker {rate} Hz",
+    "tracker_none": "Tracker: no data",
+    "tracker_idle": "Tracker –",
+    "tracker_stopped": "Tracker stopped",
+    "session_running": "Session running – live telemetry in the header.",
+    "tabs": {
+      "live": "Live",
+      "runs": "Runs",
+      "analytics": "Analytics",
+      "llm": "LLM calls",
+      "decisions": "Decisions & versions"
+    },
+    "mirror": "LIVE STIMULUS MIRROR",
+    "mirror_page": "Participant screen: {page}",
+    "por": "POR: X {x} Y {y}",
+    "aoi": "AOI: {aoi}",
+    "observer": "OBSERVER VERIFICATION",
+    "observer_check": "Observer action check – {run}, step {step}",
+    "observer_idle": "Verification is available while the participant assembles.",
+    "correct": "Correct",
+    "error": "Error",
+    "feedback_cache": "PARTICIPANT FEEDBACK CACHE",
+    "fb_difficulty": "Difficulty",
+    "fb_compact": "Compact requested",
+    "fb_removed": "Removed",
+    "fb_shown": "Shown again",
+    "fb_status": "Status",
+    "calib_gate": "CALIBRATION GATE",
+    "calib_none": "No eye-tracker check yet.",
+    "calib_result": "Mean error {err}° · max {max}° · {status}",
+    "calib_running": "Check running on the participant screen …",
+    "accept_start": "Accept & start",
+    "repeat_check": "Repeat check",
+    "skip_check": "Skip check",
+    "analytics_time": "Assembly time vs. MTM reference (all runs)",
+    "analytics_survey": "INTAKE & POST-SURVEY",
+    "analytics_requests": "Compaction requests: {n} · accepted trials kept: {kept} · reverted: {reverted}",
+    "sus_score": "SUS score: {score} / 100",
+    "no_survey": "Post-survey not completed yet.",
+    "confirm_end_title": "End session",
+    "confirm_end": "End the session now? The participant will see the final questionnaire first (if enabled).",
+    "confirm_close": "Closing the cockpit ends the running session. Continue?",
+    "export_done": "Session data exported to:\n{path}",
+    "export_failed": "Export failed",
+    "start_failed": "Could not start session",
+    "streak_value": "Streak: {n}",
+    "observer_counts": "This run: {correct} correct · {errors} errors",
+    "archive_problems": "Some records could not be read: {problems}",
+    "intake_answers": "Intake answers",
+    "no_runs": "No runs yet.",
+    "run_info": "total {total} s (reference {ref} s) · back presses {back} · observer errors {err} · merge level {level} · hidden: {hidden}",
+    "author_closed": "Author",
+    "close_archive": "Close archive",
+    "open_failed": "Could not open session",
+    "drift_queued": "Drift check queued – it runs before the next run starts.",
+    "regular": "repetition",
+    "trial": "trial run",
+    "reference": "MTM reference",
+    "duration": "duration",
+    "seconds": "seconds",
+    "percent": "% of samples",
+    "step": "Step",
+    "run": "Run",
+    "step_time": "Step completion time vs. MTM reference",
+    "aoi_dwell": "AOI dwell per step",
+    "prompt": "Full input (prompt)",
+    "raw": "Raw output",
+    "decisions": "Participant decisions",
+    "versions": "Version history",
+    "decision_columns": [
+      "Time",
+      "Run",
+      "Decision",
+      "From version",
+      "To version",
+      "Participant request"
+    ],
+    "step_columns": [
+      "Step",
+      "Duration s",
+      "Reference s",
+      "Ratio",
+      "Back",
+      "Observer errors",
+      "Valid samples",
+      "First AOI",
+      "Revisits"
+    ],
+    "page_names": {
+      "intake": "Intake",
+      "calibration": "Eye-tracker check",
+      "player": "Instruction player",
+      "saved": "Repetition completed",
+      "assess": "Layout assessment",
+      "analysing": "Processing (LLM)",
+      "trial_intro": "New layout",
+      "feedback": "Trial feedback",
+      "survey": "Post-survey",
+      "complete": "Session complete"
+    },
+    "analytics_errors": "Errors per run (observer verification and Back presses)",
+    "count": "count",
+    "observer_errors": "observer errors",
+    "back_presses": "back presses",
+    "error_steps": "Steps with errors"
+  },
+  "archive": {
+    "title": "Stored sessions",
+    "open": "Open",
+    "refresh": "Refresh",
+    "close": "Close",
+    "columns": [
+      "Participant",
+      "Started",
+      "Condition",
+      "Runs",
+      "Status",
+      "Folder"
+    ],
+    "status_ok": "ok",
+    "status_incomplete": "incomplete",
+    "status_broken": "unreadable",
+    "filter": "Filter by participant, condition or folder …"
+  },
+  "author": {
+    "tabs": {
+      "sets": "Instruction sets",
+      "media": "Media library",
+      "rules": "LLM rules"
+    },
+    "new": "New",
+    "duplicate": "Duplicate",
+    "delete": "Delete",
+    "save": "Save",
+    "add_step": "Add step",
+    "remove_step": "Remove step",
+    "move_up": "Up",
+    "move_down": "Down",
+    "import_media": "Import files …",
+    "add_rule": "Add rule",
+    "remove_rule": "Remove rule",
+    "saved": "Saved.",
+    "invalid": "Not saved – please fix:\n{errors}",
+    "confirm_delete": "Delete {name}? This cannot be undone.",
+    "set_columns": [
+      "Type",
+      "Part",
+      "Positions",
+      "Text",
+      "Expected s",
+      "Media",
+      "Reference image"
+    ],
+    "media_columns": [
+      "ID",
+      "Type",
+      "Role",
+      "Path",
+      "Description (used by the LLM)"
+    ],
+    "rule_columns": [
+      "On",
+      "Category",
+      "Rule"
+    ],
+    "id": "ID",
+    "title": "Title",
+    "media_hint": "Media: relative paths in the media folder, separated by ';' (type and role come from the media library).",
+    "media_desc_hint": "Describe each file in one sentence – the LLM uses the descriptions to choose media for combined steps.",
+    "rules_draft": "Mark rules as draft"
+  },
+  "workspace": {
+    "nav_live": "Live",
+    "nav_recordings": "Recordings",
+    "nav_enrichments": "Enrichments",
+    "nav_visualizations": "Visualizations",
+    "nav_downloads": "Downloads",
+    "camera": "Camera",
+    "checker": "Step checker",
+    "no_cameras": "no camera found",
+    "camera_check": "CAMERA CHECK",
+    "camera_idle": "No camera check yet. After each step the board photo appears here next to its reference.",
+    "camera_status": "{camera} · {pending} running · {review} to review",
+    "camera_live": "Camera (live)",
+    "camera_none": "No camera selected - choose one in Live -> pre-flight.",
+    "camera_not_ready": "The camera is not ready. Choose a camera in Live -> pre-flight and wait for the preview.",
+    "reference": "Reference",
+    "photo": "Photo",
+    "no_reference": "no reference image",
+    "no_photo": "no photo",
+    "review_queue": "NEEDS REVIEW",
+    "queue_item": "Run {run}, step {step}: {why}",
+    "chip_review": "{n} to review",
+    "observer_decides": "Observer decision:",
+    "check_line": "Run {run} · step {step} · {client} · {latency} s",
+    "check_verdict": "Check: {verdict} ({confidence} confident)",
+    "check_error": "Problem: {error}",
+    "check_reviewed": "Observer decided: {verdict}",
+    "check_needs_review": "Needs the observer: low confidence, unclear photo or no automatic check.",
+    "check_stats": "{total} checks · {auto} decided automatically · {review} waiting for review · mean confidence {conf}",
+    "check_agreement": "model agreed with the observer in {agree} of {n} reviewed checks ({pct})",
+    "no_checks": "No camera checks in this session.",
+    "check_columns": [
+      "#",
+      "Run",
+      "Step",
+      "Check",
+      "Confidence",
+      "Final",
+      "Status"
+    ],
+    "status_auto": "automatic",
+    "status_review": "review",
+    "status_reviewed": "reviewed",
+    "status_live": "live",
+    "tab_checks": "Camera checks",
+    "tab_references": "Reference images",
+    "source": "Source:",
+    "live_source": "Live session · {pid}",
+    "recording_source": "Recording · {pid} · {folder}",
+    "recording_columns": [
+      "Recording",
+      "Duration",
+      "Recorded",
+      "Condition",
+      "Runs",
+      "Status"
+    ],
+    "details": "DETAILS",
+    "last_photo": "Last board photo",
+    "no_photos": "no board photos in this session",
+    "select_recording": "Select a recording",
+    "recording_details": "Participant: {pid}\nRecorded: {started}\nCondition: {condition}  ·  LLM: {llm}\nRuns: {runs}  ·  Assembly time: {duration}\nFolder: {folder}",
+    "open_visualizations": "Open in Visualizations",
+    "open_folder": "Show in folder",
+    "ago": "{n} {unit} ago",
+    "just_now": "just now",
+    "unit_minute": "minute",
+    "unit_minutes": "minutes",
+    "unit_hour": "hour",
+    "unit_hours": "hours",
+    "unit_day": "day",
+    "unit_days": "days",
+    "unit_month": "month",
+    "unit_months": "months",
+    "unit_year": "year",
+    "unit_years": "years",
+    "instruction_set": "Instruction set:",
+    "reference_columns": [
+      "Step",
+      "Type",
+      "Text",
+      "Reference image"
+    ],
+    "ref_import": "Import image …",
+    "ref_capture": "Take photo with camera",
+    "ref_clear": "Remove",
+    "ref_capturing": "Taking photo …",
+    "ref_not_image": "Please choose an image file.",
+    "ref_status": "{n} steps · {missing} without reference image",
+    "ref_hint": "For every step, the photo of the correctly built board AFTER that step. Use the same camera position as in the study. Combined steps use the reference of their last step.",
+    "download_columns": [
+      "Name",
+      "Type",
+      "Size",
+      "Modified"
+    ],
+    "dl_sessions": "Sessions",
+    "dl_app_files": "App files",
+    "dl_folder": "Folder",
+    "dl_more": "… {n} more files (open the folder to see all)",
+    "dl_open": "Open",
+    "dl_copy": "Save a copy …",
+    "dl_aoi": "Export AOI layout",
+    "dl_aoi_done": "AOI layout saved:\n{json}\n{png}\nin {folder}",
+    "dl_hint": "Select a file or folder."
+  }
+}

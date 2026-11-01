@@ -1,0 +1,211 @@
+{
+  "id": "duplo_tower",
+  "title": "Duplo Tower",
+  "version_level": 0,
+  "settings": {
+    "merge_level": 0,
+    "hidden_elements": []
+  },
+  "steps": [
+    {
+      "index": 0,
+      "type": "pick",
+      "text": "Take a red 2x4 brick.",
+      "media": [
+        {
+          "type": "image",
+          "path": "placeholder/step0_part_red_2x4.png",
+          "role": "part"
+        },
+        {
+          "type": "video",
+          "path": "placeholder/step0_method_pick.mp4",
+          "role": "method"
+        }
+      ],
+      "interaction": "button",
+      "expected_time_s": 1.5,
+      "part_id": "red_2x4",
+      "quantity": 1,
+      "position_ids": [],
+      "covers": [],
+      "reference_image": "references/duplo_tower/step_01.png"
+    },
+    {
+      "index": 1,
+      "type": "place",
+      "text": "Place the red brick in the centre of the base plate.",
+      "media": [
+        {
+          "type": "image",
+          "path": "placeholder/step1_position_P1.png",
+          "role": "position"
+        },
+        {
+          "type": "video",
+          "path": "placeholder/step1_method_place.mp4",
+          "role": "method"
+        }
+      ],
+      "interaction": "button",
+      "expected_time_s": 2.5,
+      "part_id": "red_2x4",
+      "quantity": 1,
+      "position_ids": [
+        "P1"
+      ],
+      "covers": [],
+      "reference_image": "references/duplo_tower/step_02.png"
+    },
+    {
+      "index": 2,
+      "type": "pick",
+      "text": "Take a yellow 2x2 brick.",
+      "media": [
+        {
+          "type": "image",
+          "path": "placeholder/step2_part_yellow_2x2.png",
+          "role": "part"
+        },
+        {
+          "type": "video",
+          "path": "placeholder/step2_method_pick.mp4",
+          "role": "method"
+        }
+      ],
+      "interaction": "button",
+      "expected_time_s": 1.5,
+      "part_id": "yellow_2x2",
+      "quantity": 1,
+      "position_ids": [],
+      "covers": [],
+      "reference_image": "references/duplo_tower/step_03.png"
+    },
+    {
+      "index": 3,
+      "type": "place",
+      "text": "Place the yellow brick on the left half of the red brick.",
+      "media": [
+        {
+          "type": "image",
+          "path": "placeholder/step3_position_P2.png",
+          "role": "position"
+        },
+        {
+          "type": "video",
+          "path": "placeholder/step3_method_place.mp4",
+          "role": "method"
+        }
+      ],
+      "interaction": "button",
+      "expected_time_s": 2.5,
+      "part_id": "yellow_2x2",
+      "quantity": 1,
+      "position_ids": [
+        "P2"
+      ],
+      "covers": [],
+      "reference_image": "references/duplo_tower/step_04.png"
+    },
+    {
+      "index": 4,
+      "type": "pick",
+      "text": "Take a yellow 2x2 brick.",
+      "media": [
+        {
+          "type": "image",
+          "path": "placeholder/step4_part_yellow_2x2.png",
+          "role": "part"
+        },
+        {
+          "type": "video",
+          "path": "placeholder/step4_method_pick.mp4",
+          "role": "method"
+        }
+      ],
+      "interaction": "button",
+      "expected_time_s": 1.5,
+      "part_id": "yellow_2x2",
+      "quantity": 1,
+      "position_ids": [],
+      "covers": [],
+      "reference_image": "references/duplo_tower/step_05.png"
+    },
+    {
+      "index": 5,
+      "type": "place",
+      "text": "Place the yellow brick on the right half of the red brick.",
+      "media": [
+        {
+          "type": "image",
+          "path": "placeholder/step5_position_P3.png",
+          "role": "position"
+        },
+        {
+          "type": "video",
+          "path": "placeholder/step5_method_place.mp4",
+          "role": "method"
+        }
+      ],
+      "interaction": "button",
+      "expected_time_s": 2.5,
+      "part_id": "yellow_2x2",
+      "quantity": 1,
+      "position_ids": [
+        "P3"
+      ],
+      "covers": [],
+      "reference_image": "references/duplo_tower/step_06.png"
+    },
+    {
+      "index": 6,
+      "type": "pick",
+      "text": "Take a blue 2x4 brick.",
+      "media": [
+        {
+          "type": "image",
+          "path": "placeholder/step6_part_blue_2x4.png",
+          "role": "part"
+        },
+        {
+          "type": "video",
+          "path": "placeholder/step6_method_pick.mp4",
+          "role": "method"
+        }
+      ],
+      "interaction": "button",
+      "expected_time_s": 1.5,
+      "part_id": "blue_2x4",
+      "quantity": 1,
+      "position_ids": [],
+      "covers": [],
+      "reference_image": "references/duplo_tower/step_07.png"
+    },
+    {
+      "index": 7,
+      "type": "place",
+      "text": "Place the blue brick in the centre, on top of the two yellow bricks.",
+      "media": [
+        {
+          "type": "image",
+          "path": "placeholder/step7_position_P4.png",
+          "role": "position"
+        },
+        {
+          "type": "video",
+          "path": "placeholder/step7_method_place.mp4",
+          "role": "method"
+        }
+      ],
+      "interaction": "button",
+      "expected_time_s": 2.5,
+      "part_id": "blue_2x4",
+      "quantity": 1,
+      "position_ids": [
+        "P4"
+      ],
+      "covers": [],
+      "reference_image": "references/duplo_tower/step_08.png"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+Per step of a run summary (`steps[]`, step_index refers to that run's version; current_steps maps it to base steps):
+- duration_s: time the step was on screen (sum over visits if the participant went back)
+- duration_vs_expected_ratio: duration_s / MTM-based reference time (soft reference only; 1.0 = reference)
+- back_presses: how often "Back" was pressed on this step
+- observer_errors / observer_correct: experimenter verification of the physical assembly
+Per run (`totals`): total_duration_s, total_expected_s, total_back_presses, total_observer_errors.
+Run fields: run (sequence number), repetition (null for trial runs), is_trial, version_level, settings.

@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "draft": true,
+  "note": "DRAFT written as a starting point - review and edit in the Author tool before the study. Enabled rules are inserted into every LLM prompt.",
+  "rules": [
+    {"id": "R01", "category": "Role", "enabled": true,
+     "text": "The participant chose the direction (shorter, same steps, more detailed) and which elements to hide or show; these choices are final. You decide how far to go and which individual steps change, based on the data."},
+    {"id": "R02", "category": "Data", "enabled": true,
+     "text": "Use only runs of the current version that are not trial runs (is_trial false) to judge progress. Fewer than 2 such runs: be conservative."},
+    {"id": "R03", "category": "Compaction", "enabled": true,
+     "text": "For 'compress' from level 0 choose level 2 only if the participant is clearly fluent: the last two runs differ by less than about 15 % in total duration, have no back presses and no observer errors, and most steps are close to the reference (duration_vs_expected_ratio below about 1.5). Otherwise choose level 1."},
+    {"id": "R04", "category": "Compaction", "enabled": true,
+     "text": "Keep a step detailed (list it in keep_detailed_steps) when it shows struggle: observer errors, back presses, or a duration ratio above about 2 in the recent runs. Merging only the steps the participant masters is better than merging everything."},
+    {"id": "R05", "category": "Difficulty", "enabled": true,
+     "text": "The participant's difficulty rating matters: 'hard' means be cautious (smaller step, keep more steps detailed); 'easy' supports a larger step."},
+    {"id": "R06", "category": "Detail", "enabled": true,
+     "text": "For 'detail' go back one level unless the data shows clear struggle on the current version (several errors or back presses); then go back to level 0."},
+    {"id": "R07", "category": "Gaze", "enabled": true,
+     "text": "Condition gaze only: fluency shows as less looking at the instructions - falling dwell on text, image and video, more off_screen (looking at the bricks), fewer transitions and revisits. Many revisits to text or image mean a step is still hard. Ignore gaze for steps with very few valid samples."},
+    {"id": "R08", "category": "Texts", "enabled": true,
+     "text": "Rewritten instruction texts are short imperative sentences in plain English that name the part, colour and target position. More compact versions use fewer words; detailed versions may add one helpful hint."},
+    {"id": "R09", "category": "Media", "enabled": true,
+     "text": "Choose media by their descriptions: for combined steps prefer the image that shows the target position; keep a method video only where the action is hard."},
+    {"id": "R10", "category": "Message", "enabled": true,
+     "text": "participant_message: English, friendly, simple, 1-3 short sentences, no numbers or technical terms. Describe what will be different and say they can try it and go back afterwards."}
+  ]
+}

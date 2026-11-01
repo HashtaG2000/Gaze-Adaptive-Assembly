@@ -1,0 +1,184 @@
+# Gaze-Adaptive Assembly Instructions - main configuration.
+# Every setting of the app lives here or in the data files under data/ (texts, theme, rules,
+# media catalog, instruction sets, surveys). Coordinates are pixels on the 1920x1080 canvas.
+
+app:
+  name: "Gaze-Adaptive Assembly Study"
+  version: "2.0.0"
+  locale: "en"                # data/locale/<locale>.json holds every user-visible text
+
+screen:
+  width: 1920
+  height: 1080
+  fullscreen: true
+  monitor_index: 0            # index of the tracked monitor (QGuiApplication.screens())
+
+# Fixed element rectangles on the player screen. These rectangles ARE the AOIs.
+# Hidden elements leave their rectangle (or a subtle placeholder); other elements never move.
+aoi:
+  progress:    {x: 60,   y: 30,  w: 1800, h: 70}
+  text:        {x: 60,   y: 120, w: 1800, h: 160}
+  image:       {x: 60,   y: 310, w: 880,  h: 560}
+  video:       {x: 980,  y: 310, w: 880,  h: 560}
+  interaction: {x: 660,  y: 910, w: 600,  h: 130}
+  btn_back:    {x: 60,   y: 920, w: 320,  h: 120}
+  btn_next:    {x: 1540, y: 920, w: 320,  h: 120}
+
+input:
+  next_key: "Space"           # Qt key name; a USB buzzer mapped to this key also works
+  back_key: null              # optional keyboard key for "Back"
+  debounce_ms: 300            # ignore repeated Next/Back presses within this window (buzzer bounce)
+
+participant_id:
+  pattern: "^[A-Z0-9]{7}$"    # 7 characters, capital letters and digits
+  length: 7
+  example: "P000042"          # shown as placeholder
+  allow_duplicates: false     # refuse IDs that already have a session folder
+
+# Participant intake (P0). DRAFT questionnaire - edit for the study.
+# type: text | number | choice (choice is shown as large option cards).
+intake:
+  questions:
+    - {id: age, label: "Age", type: number, min: 16, max: 99, required: true}
+    - {id: gender, label: "Gender", type: choice, required: true,
+       options: ["Female", "Male", "Diverse", "Prefer not to say"]}
+    - {id: visual_correction, label: "Visual correction", type: choice, required: true,
+       options: ["None", "Glasses", "Soft contacts", "Hard contacts"]}
+    - {id: duplo_experience, label: "Prior Duplo / assembly experience", type: choice, required: true,
+       options: ["None", "A little", "Moderate", "A lot"]}
+
+# Eye-tracker check (P1): targets are shown one after another; the mean angular error decides
+# pass / fail. The experimenter accepts the result in the cockpit before the session continues.
+calibration:
+  enabled: true
+  points: [[0.5, 0.5], [0.1, 0.1], [0.9, 0.1], [0.1, 0.9], [0.9, 0.9]]
+  settle_s: 0.8               # ignored at the start of each point (eyes moving to the target)
+  sample_s: 1.2               # samples used per point
+  min_samples: 10
+  max_error_deg: 1.0
+  screen_width_cm: 53.1       # visible width of the tracked monitor
+  viewing_distance_cm: 65.0
+
+loop:
+  feedback_every_n_repetitions: 1  # layout feedback (P3/P4) after every N-th repetition
+  history_k: 3                # number of most recent run summaries sent to the LLM
+  max_repetitions: null       # null = until the researcher ends the session
+  analysing_min_display_s: 1.5
+  notice_display_s: 3.0
+
+feedback:
+  difficulty_options: ["easy", "medium", "hard"]   # labels in data/locale
+
+gamification:
+  streak_mode: observer       # observer: steps verified "correct" in a row | repetitions: runs without "Back"
+  show_completion_time: true  # completion time on the "repetition completed" screen
+  show_points: true           # points chip in the progress row
+  points_per_step: 10
+  points_correct_bonus: 5     # extra points when a step is verified correct (observer or camera)
+  cheer_streaks: [3, 5, 10]   # the guide praises these streaks (small tag on the speech bubble)
+  speak_s: 1.6                # the guide's mouth moves this long after a new step
+  cheer_s: 2.5
+  flash_ms: 900               # chip highlight when the streak / points grow
+  show_personal_best: true    # "new personal best" on the "repetition completed" screen
+
+post_survey:
+  enabled: true
+  survey: sus                 # data/surveys/<survey>.json
+
+ui:
+  show_hidden_placeholder: true   # dashed "removed per participant request" box in hidden AOIs
+  pixmap_cache_size: 64
+
+preprocess:
+  # Gaze runs on one AOI shorter than this are dropped from the transition sequence
+  # (and thus from first_aoi / revisit_count). Dwell % always uses every sample. 0 = off.
+  min_visit_ms: 0
+
+gaze:
+  mouse:
+    rate_hz: 60
+  gazepoint:
+    host: "127.0.0.1"
+    port: 4242
+    reconnect_s: 2.0
+    # Open Gaze API names, verified against "Open Gaze API Ver. 2.0" (Gazepoint, rev. Nov 18 2013):
+    #   <SET ID="ENABLE_SEND_..." STATE="1" />  ->  <ACK ID="..." STATE="1" />  (lines end with CRLF)
+    #   TIME  = seconds since system initialisation or calibration
+    #   FPOGX/FPOGY = fixation POG as fraction of screen (0,0 top-left .. 1,1 bottom-right)
+    #   FPOGV = 1 if fixation POG valid; FPOGID = fixation number; CNT = record counter
+    # Use BPOGX/BPOGY/BPOGV (+ ENABLE_SEND_POG_BEST) instead for unfiltered "best" POG.
+    # ENABLE_SEND_DATA must come last: it starts the stream.
+    enable_commands:
+      - ENABLE_SEND_COUNTER
+      - ENABLE_SEND_TIME
+      - ENABLE_SEND_POG_FIX
+      - ENABLE_SEND_DATA
+    fields:
+      time: TIME
+      x: FPOGX
+      y: FPOGY
+      valid: FPOGV
+      fixation_id: FPOGID
+      counter: CNT
+  mock_server:
+    # Fake GP3 for testing. Local only; different port than the real tracker.
+    host: "127.0.0.1"
+    port: 4343
+    rate_hz: 60
+
+llm:
+  gemini:
+    model: "gemini-2.5-flash"     # change to the model used in the study
+    api_key_env: "GEMINI_API_KEY" # the key is read from this environment variable only
+    temperature: 0.2
+    timeout_s: 60
+  ollama:                          # local LLM, no key needed: install Ollama, run `ollama pull <model>`
+    host: "127.0.0.1"
+    port: 11434
+    model: "qwen2.5:7b"
+    temperature: 0.2
+    timeout_s: 120
+  generation_max_retries: 1
+  max_text_chars: 220             # longest instruction text the LLM may write
+
+limits:
+  max_media_mb: 200               # largest file the Author tool imports
+  image_extensions: ["png", "jpg", "jpeg", "webp", "bmp"]
+  video_extensions: ["mp4", "mov", "webm", "avi", "mkv"]
+
+logging:
+  level: INFO
+  max_kb: 2048
+  backups: 5
+
+# Board camera: after every step a photo of the board is taken (USB webcam) and compared with the
+# step's reference image (set in Workspace -> Enrichments -> Reference images). Camera and checker
+# are chosen in the Workspace pre-flight; the check runs in the background (no waiting).
+camera:
+  device_index: 0             # which camera (see the list in the pre-flight)
+  resolution: [1920, 1080]
+  jpeg_quality: 90
+  settle_ms: 150              # pause after "Next" before the photo, so the hand is out of the way
+  mock_error_every_n: 0       # mock camera only: every n-th photo simulates an assembly error
+
+verification:
+  threshold: 0.8              # verdicts below 80 % confidence go to the observer for review
+  gemini_model: "gemini-2.5-flash"
+  ollama_model: "qwen2.5vl:7b" # free local alternatives: qwen2.5vl:3b, gemma3:4b, gemma3:12b, llama3.2-vision
+  max_image_px: 1024          # images are downscaled to this before sending
+  timeout_s: 60
+  drain_timeout_s: 30         # at session end, wait this long for checks still running
+  mock_similarity: 0.92       # mock checker: pixel similarity needed for "correct"
+
+paths:
+  instruction_sets: "data/instruction_sets"
+  media: "data/media"
+  media_catalog: "data/media/catalog.json"
+  rules: "data/rules/analysis_rules.json"
+  locale: "data/locale"
+  surveys: "data/surveys"
+  prompts: "data/prompts"          # LLM prompt templates ($placeholders)
+  theme: "data/theme.json"
+  sessions: "sessions"
+  logs: "logs"
+  exports: "exports"                # app-level downloads (AOI layout, ...)

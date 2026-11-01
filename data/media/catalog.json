@@ -1,0 +1,165 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "step0_part_red_2x4",
+      "type": "image",
+      "path": "placeholder/step0_part_red_2x4.png",
+      "role": "part",
+      "description": "Photo of one red 2x4 Duplo brick (the part to pick).",
+      "tags": [
+        "placeholder"
+      ]
+    },
+    {
+      "id": "step0_method_pick",
+      "type": "video",
+      "path": "placeholder/step0_method_pick.mp4",
+      "role": "method",
+      "description": "Looping video: a hand picks up the red 2x4 brick.",
+      "tags": [
+        "placeholder"
+      ]
+    },
+    {
+      "id": "step1_position_P1",
+      "type": "image",
+      "path": "placeholder/step1_position_P1.png",
+      "role": "position",
+      "description": "Target position: red 2x4 brick centred on the base plate.",
+      "tags": [
+        "placeholder"
+      ]
+    },
+    {
+      "id": "step1_method_place",
+      "type": "video",
+      "path": "placeholder/step1_method_place.mp4",
+      "role": "method",
+      "description": "Looping video: the red brick is pressed onto the centre of the base plate.",
+      "tags": [
+        "placeholder"
+      ]
+    },
+    {
+      "id": "step2_part_yellow_2x2",
+      "type": "image",
+      "path": "placeholder/step2_part_yellow_2x2.png",
+      "role": "part",
+      "description": "Photo of one yellow 2x2 Duplo brick.",
+      "tags": [
+        "placeholder"
+      ]
+    },
+    {
+      "id": "step2_method_pick",
+      "type": "video",
+      "path": "placeholder/step2_method_pick.mp4",
+      "role": "method",
+      "description": "Looping video: a hand picks up a yellow 2x2 brick.",
+      "tags": [
+        "placeholder"
+      ]
+    },
+    {
+      "id": "step3_position_P2",
+      "type": "image",
+      "path": "placeholder/step3_position_P2.png",
+      "role": "position",
+      "description": "Target position: yellow 2x2 brick on the left half of the red brick.",
+      "tags": [
+        "placeholder"
+      ]
+    },
+    {
+      "id": "step3_method_place",
+      "type": "video",
+      "path": "placeholder/step3_method_place.mp4",
+      "role": "method",
+      "description": "Looping video: the yellow brick is pressed onto the left half of the red brick.",
+      "tags": [
+        "placeholder"
+      ]
+    },
+    {
+      "id": "step4_part_yellow_2x2",
+      "type": "image",
+      "path": "placeholder/step4_part_yellow_2x2.png",
+      "role": "part",
+      "description": "Photo of one yellow 2x2 Duplo brick.",
+      "tags": [
+        "placeholder"
+      ]
+    },
+    {
+      "id": "step4_method_pick",
+      "type": "video",
+      "path": "placeholder/step4_method_pick.mp4",
+      "role": "method",
+      "description": "Looping video: a hand picks up the second yellow 2x2 brick.",
+      "tags": [
+        "placeholder"
+      ]
+    },
+    {
+      "id": "step5_position_P3",
+      "type": "image",
+      "path": "placeholder/step5_position_P3.png",
+      "role": "position",
+      "description": "Target position: yellow 2x2 brick on the right half of the red brick.",
+      "tags": [
+        "placeholder"
+      ]
+    },
+    {
+      "id": "step5_method_place",
+      "type": "video",
+      "path": "placeholder/step5_method_place.mp4",
+      "role": "method",
+      "description": "Looping video: the yellow brick is pressed onto the right half of the red brick.",
+      "tags": [
+        "placeholder"
+      ]
+    },
+    {
+      "id": "step6_part_blue_2x4",
+      "type": "image",
+      "path": "placeholder/step6_part_blue_2x4.png",
+      "role": "part",
+      "description": "Photo of one blue 2x4 Duplo brick.",
+      "tags": [
+        "placeholder"
+      ]
+    },
+    {
+      "id": "step6_method_pick",
+      "type": "video",
+      "path": "placeholder/step6_method_pick.mp4",
+      "role": "method",
+      "description": "Looping video: a hand picks up the blue 2x4 brick.",
+      "tags": [
+        "placeholder"
+      ]
+    },
+    {
+      "id": "step7_position_P4",
+      "type": "image",
+      "path": "placeholder/step7_position_P4.png",
+      "role": "position",
+      "description": "Target position: blue 2x4 brick centred on top of both yellow bricks.",
+      "tags": [
+        "placeholder"
+      ]
+    },
+    {
+      "id": "step7_method_place",
+      "type": "video",
+      "path": "placeholder/step7_method_place.mp4",
+      "role": "method",
+      "description": "Looping video: the blue brick is pressed onto the two yellow bricks.",
+      "tags": [
+        "placeholder"
+      ]
+    }
+  ]
+}

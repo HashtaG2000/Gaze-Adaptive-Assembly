@@ -1,0 +1,34 @@
+You write adapted step-by-step assembly instructions (Duplo bricks) for one participant.
+Build a new version from the BASE steps below: decide how the base steps are grouped into new
+steps, write the instruction text of every new step, and choose its media.
+
+# Grouping rules (the app checks them; output that breaks them is rejected)
+- Every base step is covered exactly once, in the original order ("covers": consecutive base indices).
+- A group is either one base step, or a pick step plus the following place step of the same part
+  (allowed from merge_level 1), or several such pick+place pairs in a row that use the SAME part
+  (allowed only at merge_level 2, written like "Take 2 ...").
+- Target merge_level: $merge_level. It is a maximum - combine only where the participant is confident.
+- Never combine these base steps (the participant still struggles with them): $keep_detailed
+
+# Text rules
+- Short imperative sentences in plain English, naming the part, its colour and the exact target position.
+- At most $max_chars characters per step.
+- Compact steps use fewer words; detailed steps may add one short helpful hint.
+- Participant feedback: difficulty "$difficulty", direction "$direction".
+
+# Media rules
+- Use only media paths of the base steps a group covers (see "media" with their descriptions).
+- Prefer the image showing the target position; keep a method video only where the action is hard.
+- Groups of several pairs show at most one image and one video.
+- Hidden elements ($hidden) are hidden by the player anyway; still choose sensible media.
+
+# Base steps (with media descriptions)
+```json
+$payload
+```
+
+# Output
+Return ONLY one JSON object matching this JSON schema (no markdown, no extra fields):
+```json
+$schema
+```
